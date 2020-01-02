@@ -3,6 +3,7 @@
     <md-date-picker
       ref="datePicker"
       type="datetime"
+      text-render="textRender"
       :default-date="currentDate"
       is-view
       keep-index
@@ -10,7 +11,8 @@
   </div>
 </template>
 
-<script>import {DatePicker, Dialog} from 'mand-mobile'
+<script>
+import {DatePicker, Dialog} from 'mand-mobile'
 
 export default {
   name: 'date-picker-demo',
@@ -33,5 +35,11 @@ export default {
       })
     }
   },
+  methods:{
+    textRender(typeFormat, column0Value, column1Value){
+     console.log(column0Value)
+    }
+  }
 }
-</script>
+
+</script>
